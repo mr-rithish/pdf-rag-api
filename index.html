@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuAsk — AI Document Q&A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>DocuAsk</h1>
+            <p>Upload PDFs and ask questions about them</p>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-box" id="uploadBox">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 16V4m0 0L8 8m4-4l4 4M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1"/></svg>
+                <p>Drop PDFs here or <span class="link">browse</span></p>
+                <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+            </div>
+            <div id="fileList"></div>
+            <button class="btn" id="uploadBtn" disabled>Process PDFs</button>
+            <p class="status" id="uploadStatus"></p>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-section" id="chatSection" style="display:none">
+            <div class="chat-box" id="chatBox"></div>
+            <div class="input-row">
+                <input type="text" id="questionInput" placeholder="Ask a question about your documents..." />
+                <button class="btn" id="askBtn">Ask</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

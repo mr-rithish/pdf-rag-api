@@ -1,0 +1,149 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+}
+
+header p {
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Upload */
+.upload-box {
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.upload-box:hover { border-color: #888; }
+.upload-box svg { color: #aaa; margin-bottom: 12px; }
+.upload-box p { color: #666; }
+.link { color: #2563eb; cursor: pointer; }
+
+#fileList {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.file-tag {
+    background: #f0f0f0;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover { background: #333; }
+.btn:disabled { background: #ccc; cursor: not-allowed; }
+
+.status {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Chat */
+.chat-section { margin-top: 32px; }
+
+.chat-box {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    height: 420px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.message { display: flex; flex-direction: column; gap: 4px; }
+
+.message.user .bubble {
+    align-self: flex-end;
+    background: #111;
+    color: white;
+    border-radius: 12px 12px 2px 12px;
+}
+
+.message.bot .bubble {
+    align-self: flex-start;
+    background: #f0f0f0;
+    color: #111;
+    border-radius: 12px 12px 12px 2px;
+}
+
+.bubble { padding: 10px 14px; max-width: 85%; font-size: 0.95rem; line-height: 1.5; }
+
+.sources {
+    font-size: 0.78rem;
+    color: #888;
+    padding-left: 4px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-row input:focus { border-color: #111; }
+
+.input-row .btn {
+    width: auto;
+    margin-top: 0;
+    padding: 12px 24px;
+}
